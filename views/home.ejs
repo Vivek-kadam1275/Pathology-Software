@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+      <!-- fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lilita+One&display=swap" rel="stylesheet">
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="./style/home.css">
+
+      <title> Home</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <!-- <a href="#" class="nav__logo">Logo</a> -->
+            <form action="/" >
+                <input type="submit" value="log out" id="logout" class="nav__link">
+            </form>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <!-- <a href="#" class="nav__link">New Entry</a> -->
+                     <form action="/entry" >
+                        <input type="submit" value="New Entry" class="nav__link">
+                     </form>
+                  </li>
+
+                  <li class="nav__item">
+                     <form action="/history">
+                        <input type="submit" value="View Entries" class="nav__link">
+                     </form>                 
+                   </li>
+
+                  <li class="nav__item">
+                     <form action="/reports">
+                        <input type="submit" value="Reports" class="nav__link">
+                     </form>
+                  </li>
+
+                  <li class="nav__item">
+                     <form action="/doctorEntry">
+                        <input type="submit" value="Add Doctors" class="nav__link">
+                     </form>
+                     <!-- <a href="#" class="nav__link">Add Doctors</a> -->
+                  </li>
+
+                  <li class="nav__item">
+                     <form action="/viewDoctors">
+                        <input type="submit" value="View Doctors" class="nav__link">
+                     </form>
+                     <!-- <a href="#" class="nav__link">Cashbook</a> -->
+                  </li>
+                  <li class="nav__item">
+                     <form action="/viewTests">
+                        <input type="submit" value="View Tests" class="nav__link">
+                     </form>                 
+                  </li>
+                 <li class="nav__item">
+                    <!-- <a href="#" class="nav__link">Create Bill</a> -->
+                    <form action="/bill">
+                     <input type="submit" value="Bill" class="nav__link">
+                  </form>
+                 </li>
+               </ul>
+
+               <!-- Close button -->
+               <!-- <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div> -->
+            </div>
+
+            <!-- <div class="nav__actions">
+                <i class="ri-search-line nav__search" id="search-btn"></i>
+
+                <i class="ri-user-line nav__login" id="login-btn"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line"></i>
+               </div>
+            </div> -->
+         </nav>
+      </header>
+ 
+      <!--==================== SEARCH ====================-->
+      <!-- <div class="search" id="search">
+         <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search__input">
+         </form>
+  
+         <i class="ri-close-line search__close" id="search-close"></i>
+      </div> -->
+
+      
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <img src="./images/home_bg.png" alt="image" class="main__bg">
+         <h1 id="titlePath">Welcome to
+            <%= labname %>
+        </h1>
+         
+      </main> 
+       
+      
+      
+      <!--=============== MAIN JS ===============-->
+      <script src="./js/home.js"></script>
+
+      <script>
+         //  let logout=document.getElementById('logout');
+         //  logout.addEventListener('click',()=>{
+         //    alert("Logout Successfully!!!")
+         //  })
+      </script>
+   </body>
+</html>

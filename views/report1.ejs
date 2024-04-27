@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report</title>
+  <link rel="stylesheet" href="./style/report1.css">
+
+ </head>
+
+<body>
+  <header>
+    <div class="container">
+      <div>
+      <span>Patient Id:</span><%= id %>
+    </div>
+    <div>
+      <span>Patient Name:</span><%= contraction %><%= name %>
+    </div>
+    <div>
+      <span>Mobile No.:</span><%= mobile %>
+    </div>
+    <div>
+      <span>Date:</span><%= dates %>
+    </div>
+    <div>
+      <span>Gender:</span><%= gender %>
+    </div>
+    <div>
+      <span>Age:</span><%= age %>
+    </div>
+    <div>
+      <span>Doctor:</span><%= doctor %>
+    </div>
+    </div>
+   
+   
+  </header>
+  <div class="container2">
+    TESTS:
+    <% for(var i=0;i<array.length;i++){ %>
+      <span>
+        <%= array[i] %>
+      </span>
+      <% } %>
+  </div>
+  <div>
+    <div class="container3">
+      <% for(var i=0;i<array.length;i++){ %>
+        <form action='/<%= array[i] %>' method="post">
+          <input type="text" value=<%=id %> placeholder="pid" name="pid">
+          <input type="text" value=<%=array[i] %> name="tname" id="tname" >
+          <input type="submit" value=<%= array[i] %>>
+        </form>
+    
+        <% } %>
+    </div>
+
+  </div>
+</body>
+
+</html>

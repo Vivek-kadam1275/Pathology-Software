@@ -1,0 +1,208 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./style/cbc.css">
+</head>
+
+<body>
+  <header>
+    <div id="head1">
+      <img src="./images/lab_logo.png" alt="not available" id="logo">
+      <div id="head2">
+        <div id="labTitle">
+          <h2 id="name"><%= PathologyName %></h2>
+          <h3 id="pathology"> Pathology</h3>
+        </div>
+        <div id="technicianTitle">
+          <h2 class="trapezoid_1"><br><%=NameOfTechnician %> <br>
+            (<%= Degree %>)
+            <br>Mob. <%= Mobile %> <br>
+            <%= Address %>
+          </h2>
+        </div>
+
+      </div>
+    </div>
+    <p class="desc">*Bio Chemist Analyzer and Hematology Cell Counter*</p>
+    <hr class="hrHeader">
+  </header>
+
+
+  <section id="patientTitle">
+
+    <div id="patientName">
+      <!-- Patient: Mr.Vivek Dadasaheb Kadam -->
+      Patient: <%=title %>
+        <%=Patientname %>
+    </div>
+    <div>Phoneno:<%=Phoneno %>
+    </div>
+
+    <div> Date:<%=date%>
+    </div>
+
+    <div> Gender:<%=Gender %>
+    </div>
+
+    <div id="six"> Age:<%=Age%>
+    </div>
+
+    <div> Ref. by: <%=doctor %>
+    </div>
+    <br>
+  </section>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"> Sr.</th>
+        <th scope="col">Test</th>
+        <th scope="col">Patient's Value</th>
+        <th scope="col">Units</th>
+        <th scope="col">Normal Range</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Haemoglobin:</td>
+        <td>
+          <%=hgb%>
+        </td>
+        <td>gm%</td>
+        <td>Adult Male 12.5 - 18.0 <br>Adult Female 12.5 - 16.0</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>W.B.C Counts:</td>
+        <td>
+          <%= wbc%>
+        </td>
+        <td>/cu.mm.</td>
+        <td>Adult 4,500 - 10,000 <br>Child 6,000 - 18,000 <br>Infant 10,000 - 25,000</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Neutrophils:</td>
+        <td>
+          <%= neutrophils%>
+        </td>
+        <td> %</td>
+        <td>50 - 70</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Lympocytes:</td>
+        <td>
+          <%=lympocytes %>
+        </td>
+        <td>%</td>
+        <td>20 - 40</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Eosinophils:</td>
+        <td>
+          <%=eosinophils %>
+        </td>
+        <td>%</td>
+        <td>01 - 06</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Monocytes:</td>
+        <td>
+          <%= monocytes%>
+        </td>
+        <td>%</td>
+        <td>02 - 08</td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>E.S.R. :</td>
+        <td>
+          <%=esr %>
+        </td>
+        <td>mm/hr</td>
+        <td>Male 00 - 20 <br>Female 00 - 15 </td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>RBC Counts:</td>
+        <td>
+          <%= rbc%>
+        </td>
+        <td>millions/cu.mm.</td>
+        <td>Adult 3.8 - 5.5 <br> Infant 6.5 - 7.25</td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>HCT/PCV:</td>
+        <td>
+          <%=hct %>
+        </td>
+        <td>%</td>
+        <td>Child 38 - 44,Infant 35 - 40 <br>Male 35 - 50, Female 37 - 43</td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>MCV:</td>
+        <td>
+          <%= mcv%>
+        </td>
+        <td>ft.</td>
+        <td>82 - 92</td>
+      </tr>
+      <tr>
+        <th scope="row">11</th>
+        <td>MCH:</td>
+        <td>
+          <%= mch%>
+        </td>
+        <td>pg</td>
+        <td>27 - 32</td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td>RWD-SD:</td>
+        <td>
+          <%=sd %>
+        </td>
+        <td>ft.</td>
+        <td>37.0 - 54.0</td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td>RWD-CV:</td>
+        <td>
+          <%=cv %>
+        </td>
+        <td>%</td>
+        <td>11.5 - 14.5</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <button onclick="printPage()" id="btn">Print</button>
+  <footer>
+    <hr class="hrHeader">
+    <p class="desc" id="footer1">*Computersied Lab  *Accuracy  *Power Backup</p>
+    <p class="desc" id="footer2">*Fully Automated Haematology Analyzer *Biochemistry Analyzer</p>
+    <p id="footer3">Note: All abnormal results are rechecked and confirmer by MD path Lab. If any doubt kindly recheck on fresh sample</p>
+  </footer>
+
+  <script src="./js/report.js"></script>
+   
+</body>
+
+</html>
