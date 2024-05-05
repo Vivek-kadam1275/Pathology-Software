@@ -1,0 +1,43 @@
+table::before{
+    content: "";
+    background-image: url("../images/doctor.jpg");
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top:0;
+    left: 0;
+}
+table {
+    margin: 50px auto;
+    padding: 0;
+    border: 7px solid #03365f;
+    background-color: white;
+  }
+
+  /* Style the table */
+  .table {
+    width: 900px;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  /* Style table header */
+  .table thead th {
+    background-color: #03365f;
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+  }
+
+  /* Style table body */
+  .table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  /* Style the last cell of each row to avoid a bottom border */
+  .table tbody tr:last-child td {
+    border-bottom: none;
+  }
