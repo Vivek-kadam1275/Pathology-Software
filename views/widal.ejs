@@ -1,0 +1,137 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WIDAL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./style/report.css">
+  <style>
+    footer{
+        margin-top: 395px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="head1">
+      <img src="./images/lab_logo.png" alt="not available" id="logo">
+      <div id="head2">
+        <div id="labTitle">
+          <h2 id="name"><%= PathologyName %></h2>
+          <h3 id="pathology"> Pathology</h3>
+        </div>
+        <div id="technicianTitle">
+          <h2 class="trapezoid_1"><br><%=NameOfTechnician %> <br>
+            (<%= Degree %>)
+            <br>Mob. <%= Mobile %> <br>
+            <%= Address %>
+          </h2>
+        </div>
+
+      </div>
+    </div>
+    <p class="desc">*Bio Chemist Analyzer and Hematology Cell Counter*</p>
+    <hr class="hrHeader">
+  </header>
+
+
+  <section id="patientTitle">
+
+    <div id="patientName">
+      <!-- Patient: Mr.Vivek Dadasaheb Kadam -->
+      Patient: <%=title %>
+        <%=Patientname %>
+    </div>
+    <div>Phoneno:<%=Phoneno %>
+    </div>
+
+    <div> Date:<%=date%>
+    </div>
+
+    <div> Gender:<%=Gender %>
+    </div>
+
+    <div id="six"> Age:<%=Age%>
+    </div>
+
+    <div> Ref. by: <%=doctor %>
+    </div>
+    <br>
+  </section>
+
+   
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"> Sr.</th>
+        <th scope="col">Test</th>
+        <th scope="col">Patient's Value</th>
+         
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>S. Typhi 'O':</td>
+        <td>
+          <%= o %>
+        </td>
+        
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>S.Typhi 'H':</td>
+        <td>
+          <%= h%>
+        </td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>S.Paratyphi[AH]:</td>
+        <td>
+          <%= ah%>
+        </td>
+         
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>S.Paratyphi[BH]::</td>
+        <td>
+          <%=bh %>
+        </td>
+        
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Widal Test:</td>
+        <td>
+          <%= widaltest%>
+        </td>
+         
+      </tr>
+       
+    </tbody>
+  </table>
+  
+  <button onclick="printPage()" id="btn">Print</button>
+  <footer>
+    <hr class="hrHeader">
+    <p class="desc" id="footer1">*Computersied Lab  *Accuracy  *Power Backup</p>
+    <p class="desc" id="footer2">*Fully Automated Haematology Analyzer *Biochemistry Analyzer</p>
+    <p id="footer3">Note: All abnormal results are rechecked and confirmer by MD path Lab. If any doubt kindly recheck on fresh sample</p>
+  </footer>
+
+  <script src="./js/report.js"></script>
+   
+</body>
+
+</html>

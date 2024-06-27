@@ -1,0 +1,102 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style/bill.css">
+</head>
+
+<body>
+  <header>
+    <div id="head1">
+      <img src="./images/lab_logo.png" alt="not available" id="logo">
+      <div id="head2">
+        <div id="labTitle">
+          <h2 id="name"><%= PathologyName %></h2>
+          <h3 id="pathology"> Pathology</h3>
+        </div>
+        <div id="technicianTitle">
+            <h2 class="trapezoid_1"><br><%=NameOfTechnician %> <br>
+              (<%= Degree %>)
+              <br>Mob. <%= Mobile %> <br>
+              <%= Address %>
+            </h2>
+          </div>
+
+      </div>
+    </div>
+    <p class="desc">*Bio Chemist Analyzer and Hematology Cell Counter*</p>
+    <hr class="hrHeader">
+  </header>
+
+
+  <section id="patientTitle">
+
+    <div id="patientName">
+      <!-- Patient: Mr.Vivek Dadasaheb Kadam -->
+      Patient: <input type="text" placeholder="" name="" id="">
+    </div>
+    <div>Phoneno: <input type="number" name="" id="">
+    </div>
+
+    <div> Date: <input type="date" name="" id="">
+    </div>
+
+    <div> Gender   : <input type="text" name="" id="">
+    </div>
+
+    <div id="six">Age: <input type="number" name="" id="">
+    </div>
+
+    <div> Ref. by : <input type="text" name="" id="">
+    </div>
+    <br>
+  </section>
+ 
+
+    <button onclick="addRow()" id="add">Add</button> 
+      <button id="btn" class="print">Print</button>
+  
+  <div id="tableSection">
+    <table class="table" >
+      <thead >
+        <tr>
+          <th scope="col"> Sr.</th>
+          <th scope="col">Test</th>
+          <th scope="col">Price</th>
+          <th scope="col">#</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+       
+        
+      </tbody>
+    </table> 
+    
+    <div id="sum">
+        <h4>Total:</h4>
+    </div>
+  </div>
+  <footer>
+    <hr class="hrHeader">
+    <p class="desc" id="footer1">*Computersied Lab  *Accuracy  *Power Backup</p>
+    <p class="desc" id="footer2">*Fully Automated Haematology Analyzer *Biochemistry Analyzer</p>
+    <p id="footer3">Note: All abnormal results are rechecked and confirmer by MD path Lab. If any doubt kindly recheck on fresh sample</p>
+  </footer>
+
+  <script src="./js/bill.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Patients:</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/history.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Tracking Wellness: Journey Through Patient Entries</h1>
+  </header>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"> Sr.</th>
+        <th scope="col">PatienId</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Date</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Age</th>
+        <th scope="col">Doctor</th>
+        <th scope="col">Tests</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        <% for(var i=0;i<size;i++){ %>
+        <tr>
+           <td scope="row"> <%= i+1 %> </td>
+            <td scope="row"> <%= arra[i].id %> </td>
+            <td scope="row"><%= arra[i].contraction %><%= arra[i].name %></td>
+            <td scope="row"> <%= arra[i].mobile %> </td>
+            <% const dateFromDB = arra[i].dates;%>
+            <% const formattedDate = new Date(dateFromDB).toLocaleDateString('en-GB');  %>
+            <td scope="row"> <%= formattedDate %> </td>
+            <td scope="row"> <%= arra[i].gender %> </td>
+            <td scope="row"> <%= arra[i].age %> </td>
+            <td scope="row"> <%= arra[i].doctor %> </td>
+            
+            <td scope="row"><%=arra[i].tname  %></td>
+        </tr>
+        <% } %>
+       
+    </tbody>
+  </table>
+  
+   
+
+   
+   
+</body>
+
+</html>

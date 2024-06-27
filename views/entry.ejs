@@ -1,0 +1,326 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry</title>
+    <link rel="stylesheet" href="./style/entry.css">
+<style>
+    body {
+    font-family: 'Lilita One', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Form container */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form heading */
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Form inputs */
+input, select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Form checkboxes */
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Labels for checkboxes */
+label {
+    margin-right: 15px;
+}
+
+/* Sections */
+div.nVisible {
+    margin-bottom: 20px;
+}
+
+/* Submit button */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    form {
+        padding: 10px;
+    }
+
+    /* Adjusting input sizes */
+    input, select {
+        padding: 8px;
+    }
+
+    /* Adjusting form heading */
+    form h2 {
+        font-size: 20px;
+    }
+
+    /* Adjusting submit button padding */
+    input[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+     
+         <form action="/patientDetialsSubmit" Method="Post" id="form1">
+        <h2>Patient Details</h2>
+        <select name="title" id="title">
+            <option value="Mr.">Mr.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Master">Master.</option>
+            <option value="Miss.">Miss.</option>
+        </select>
+        <input type="text" name="Patientname" placeholder="patient name">
+
+        <input type="number" name="Phoneno" id="" placeholder="phoneno">
+        <input type="date" name="date" id="">
+
+        <select name="gender" id="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <input type="number" name="Age" id="" placeholder="Age">
+
+        <select name="Refdr" id="Refdr">
+            <% for(var i=0;i<name.length;i++){ %>
+                <option value=<%=name[i] %>><%= name[i] %>
+                </option>
+                <% } %>
+        </select>
+        <hr>
+        <label for="cbc">CBC:</label>
+        <input type="checkbox" name="cbc" id="cbc" value="CBC">
+    
+        <label for="widal">WIDAL:</label>
+        <input type="checkbox" name="widal" id="widal" value="WIDAL">
+    
+        <label for="urine">URINE:</label>
+        <input type="checkbox" name="urine" id="urine" value="URINE">
+
+        <div class="nVisible" id="cbcSection">
+            <input type="number" name="hgb" id="hgb" placeholder="Haemoglobin">
+            <input type="number" name="wbc" id="wbc" placeholder="wbc">
+            <input type="number" name="neutrophils" id="neutrophils" placeholder="neutrophils">
+            <input type="number" name="lympocytes" id="lympocytes" placeholder="lympocytes">
+            <input type="number" name="eosinophils" id="eosinophils" placeholder="eosinophils">
+            <input type="number" name="monocytes" id="monocytes" placeholder="monocytes">
+            <input type="number" name="esr" id="esr" placeholder="esr"> 
+            <input type="number" name="rbc" id="rbc" placeholder="rbc">
+            <input type="number" name="hct" id="hct" placeholder="hct">
+            <input type="number" name="mcv" id="mcv" placeholder="mcv">
+            <input type="number" name="mch" id="mch" placeholder="mch">
+            <input type="number" name="mchc" id="mchc" placeholder="mchc">
+            <input type="number" name="sd" id="sd" placeholder="sd">
+            <input type="number" name="cv" id="cv" placeholder="cv">
+        </div>
+        <br>
+        <div class="nVisible" id="widalSection">
+            <input type="text" name="o" id="o" placeholder="S. Typhi 'O'">
+        <input type="text" name="h" id="h" placeholder="S. Typhi 'H'">
+        <input type="text" name="ah" id="ah" placeholder="S.Paratyphi[AH]">
+        <input type="text" name="bh" id="bh" placeholder="S.Parathphi[BH]">
+        <input type="text" name="widaltest" id="widaltest" placeholder="Widal Test">
+        </div>
+        <br>
+        <div class="nVisible" id="urineSection">
+
+            <h6> MACROSCOPIC EXAMINATION</h6>
+        <input type="number" name="quantity" id="quantity" placeholder="Quantity">
+        <input type="text" name="colour" id="colour" placeholder="Colour">
+        <input type="text" name="appearance" id="appearance" placeholder="Appearance">
+        <input type="text" name="ph" id="ph" placeholder="PH">
+        <input type="text" name="diposit" id="diposit" placeholder="Diposit">
+        <input type="text" name="specificgravity" id="specificGravity" placeholder="Specific Gravity">
+
+         
+        
+        </div>
+        <input type="submit" value="save">
+
+
+
+
+    </form>
+
+
+    
+
+
+
+   
+    <hr>
+
+
+
+    <script src="./js/entry.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/entry.css">  
+</head>
+<body>
+   <form action="/patientDetialsSubmit" Method="Post" id="form1">
+       <h2>Patient Details</h2>
+       <div class="patient">
+         
+       <select name="title" id="title">
+           <option value="Mr.">Mr.</option>
+           <option value="Mrs.">Mrs.</option>
+           <option value="Master">Master.</option>
+           <option value="Miss.">Miss.</option>
+       </select>
+       <input type="text" name="Patientname" placeholder="patient name">
+
+       <input type="number" name="Phoneno" id="" placeholder="phoneno">
+       <input type="date" name="date" id="">
+
+       <select name="gender" id="Gender">
+           <option value="Male">Male</option>
+           <option value="Female">Female</option>
+       </select>
+
+       <input type="number" name="Age" id="" placeholder="Age">
+
+       <select name="Refdr" id="Refdr">
+        <option value="-">Ref. by</option>
+           <% for(var i=0;i<name.length;i++){ %>
+               <option value=<%=name[i] %>><%= name[i] %>
+               </option>
+               <% } %>
+       </select>
+       
+       
+       </div>
+       <hr>
+       <label for="cbc">CBC:</label>
+       <input type="checkbox" name="cbc" id="cbc" value="CBC">
+   
+       <label for="widal">WIDAL:</label>
+       <input type="checkbox" name="widal" id="widal" value="WIDAL">
+   
+       <label for="urine">URINE:</label>
+       <input type="checkbox" name="urine" id="urine" value="URINE">
+
+       <div class="nVisible" id="cbcSection">
+           <h2 class="section">CBC SECTION</h2>
+           <div class="patient">
+               <input type="number" name="hgb" id="hgb" placeholder="Haemoglobin">
+           <input type="number" name="wbc" id="wbc" placeholder="wbc">
+           <input type="number" name="neutrophils" id="neutrophils" placeholder="neutrophils">
+           <input type="number" name="lympocytes" id="lympocytes" placeholder="lympocytes">
+           <input type="number" name="eosinophils" id="eosinophils" placeholder="eosinophils">
+           <input type="number" name="monocytes" id="monocytes" placeholder="monocytes">
+           <input type="number" name="esr" id="esr" placeholder="esr"> 
+           <input type="number" name="rbc" id="rbc" placeholder="rbc">
+           <input type="number" name="hct" id="hct" placeholder="hct">
+           <input type="number" name="mcv" id="mcv" placeholder="mcv">
+           <input type="number" name="mch" id="mch" placeholder="mch">
+           <input type="number" name="mchc" id="mchc" placeholder="mchc">
+           <input type="number" name="sd" id="sd" placeholder="sd">
+           <input type="number" name="cv" id="cv" placeholder="cv">
+           </div>
+       </div>
+       <br>
+       <div class="nVisible" id="widalSection">
+           <h2>WIDAL SECTION</h2>
+           <div class="patient">
+               <input type="text" name="o" id="o" placeholder="S. Typhi 'O'">
+       <input type="text" name="h" id="h" placeholder="S. Typhi 'H'">
+       <input type="text" name="ah" id="ah" placeholder="S.Paratyphi[AH]">
+       <input type="text" name="bh" id="bh" placeholder="S.Parathphi[BH]">
+       <input type="text" name="widaltest" id="widaltest" placeholder="Widal Test">
+           </div>
+       </div>
+       <br>
+       <div class="nVisible" id="urineSection">
+
+            <h2>URINE SECTION</h2>
+      <div class="patient">
+       <input type="number" name="quantity" id="quantity" placeholder="Quantity">
+       <input type="text" name="colour" id="colour" placeholder="Colour">
+       <input type="text" name="appearance" id="appearance" placeholder="Appearance">
+       <input type="text" name="ph" id="ph" placeholder="PH">
+       <input type="text" name="diposit" id="diposit" placeholder="Diposit">
+       <input type="text" name="specificgravity" id="specificGravity" placeholder="Specific Gravity">
+
+      </div>
+        
+       
+       </div>
+       <input type="submit" value="save">
+
+   </form>
+
+
+   
+
+
+
+  
+    
+<script>
+    document.getElementById('cbc').addEventListener('change',()=>{
+   document.getElementById('cbcSection').classList.toggle('Visible');
+})
+
+document.getElementById('widal').addEventListener('change',()=>{
+   document.getElementById('widalSection').classList.toggle('Visible');
+})
+
+document.getElementById('urine').addEventListener('change',()=>{
+   document.getElementById('urineSection').classList.toggle('Visible');
+})
+</script>
+</body>
+</html>

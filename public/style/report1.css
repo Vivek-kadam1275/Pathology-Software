@@ -1,0 +1,99 @@
+body{
+
+    height: 100vh;
+    width: 100vw;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* header::before{
+    content: "";
+    background-image: url("../images/home_bg.png");
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    top:0;
+    left: 0;
+} */
+
+input[type="text"]{
+    display:none;
+}
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .container > div {
+    margin-bottom: 10px;
+  }
+  
+  .container > div span {
+    font-weight: bold;
+  }
+  
+  /* Test container styles */
+  .container2 {
+     
+    margin: 5px 658px;
+  }
+  
+  /* Container2 styles */
+  .container3 {
+     height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    /* border: 2px solid red; */
+
+  }
+  
+  /* Form styles */
+  form {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="submit"] {
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

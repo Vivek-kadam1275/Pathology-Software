@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Doctor</title>
+    <link rel="stylesheet" href="./style/adddoctor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Doctor</h2>
+        <form action="/addDoctor" method="post">
+            <div class="form-group">
+                <label for="doctor">Doctor's Name:</label>
+                <input type="text" name="doctor" id="doctor" >
+            </div>
+            <div class="form-group">
+                <label for="degree">Doctor's Degree:</label>
+                <input type="text" name="degree" id="degree" >
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Doctor" id="submit">
+            </div>
+            
+        
+        </form>
+        <div class="form-group">
+            <form action="/viewDoctors">
+                <input type="submit" value="View Doctors" id="">
+            </form>
+         </div>
+    </div>
+
+ <script src="./js/adddoctor.js"></script>  
+</body>
+</html>

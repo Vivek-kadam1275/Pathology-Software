@@ -1,0 +1,141 @@
+/*  
+header::before{
+    background-image: url("../images/entry_bg.jpg");
+    content: "";   
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: -1;
+    opacity: 0.4;
+}
+
+
+.nVisible{
+    display: none;
+}
+
+.Visible{
+    display: block;
+} */
+
+
+
+.nVisible{
+    display: none;
+ }
+ 
+ .Visible{
+    display: block;
+     
+ }
+ body {
+    font-family: 'Lilita One', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    /* background-color: #9ec8de; */
+    background-image: url("../images/doctor.jpg");
+ }
+ 
+ /* Form container */
+ form {
+    max-width: 1000px;
+    margin: 102px auto;
+    padding: 20px;
+    background-color: #ace2eb;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+ }
+ .patient{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,60px);
+ }
+ 
+ 
+ /* Form heading */
+ form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+ }
+ 
+ /* Form inputs */
+ input, select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+ }
+ 
+ /* Form checkboxes */
+ input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+ }
+ 
+ /* Labels for checkboxes */
+ label {
+    margin-right: 15px;
+ }
+ 
+ /* Sections */
+ div.nVisible {
+    margin-bottom: 20px;
+ }
+ 
+ /* Submit button */
+ input[type="submit"] {
+    width: 100px;
+    margin-left: 44%;
+    margin-bottom: 0px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+ }
+ 
+ input[type="submit"]:hover {
+    background-color: #45a049;
+ }
+ 
+ /* Responsive styles */
+ @media (max-width: 768px) {
+    form {
+        padding: 10px;
+    }
+ 
+    /* Adjusting input sizes */
+    input, select {
+        padding: 4px;
+    }
+ 
+    /* Adjusting form heading */
+    form h2 {
+        font-size: 20px;
+    }
+ 
+    /* Adjusting submit button padding */
+    input[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+ }
+ 
+ .section{
+    display: block;
+ }
+
+

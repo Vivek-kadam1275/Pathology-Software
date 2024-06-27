@@ -1,0 +1,73 @@
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f4f4f4;
+     /* background-image: url('../images/doctor.jpg'); */
+     height: 100px;
+ }
+
+ .container::before {
+     background-image: url('../images/doctor.jpg');
+     content: "";
+     position: absolute;
+     top:0;
+     left: 0;
+     z-index: -1;
+     opacity: 1;
+     height: 100%;
+     width: 100%;
+
+ }
+
+ .container {
+     max-width: 400px;
+     margin: 200px auto;
+     padding: 20px;
+     /* background-color: rgb(232, 153, 153); */
+     background-image: url("../images/doctor.jpg");
+     border-radius: 20px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .container h2 {
+     text-align: center;
+     margin-bottom: 20px;
+     font-family: "Lilita One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 50px;
+     text-shadow: 2px 5px white;
+ }
+
+ .form-group {
+     margin-bottom: 20px;
+ }
+
+ .form-group label {
+     display: block;
+     margin-bottom: 5px;
+     font-family: "Lilita One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     color: white;
+     text-shadow: 5px 2px black;
+ }
+
+ .form-group input {
+     width: 100%;
+     padding: 8px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+      
+ }
+
+ .form-group input[type="submit"] {
+     background-color: #007bff;
+     color: #fff;
+     cursor: pointer;
+ }
+
+ .form-group input[type="submit"]:hover {
+     background-color: #0056b3;
+ }
