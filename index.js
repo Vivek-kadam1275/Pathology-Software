@@ -4,8 +4,8 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import pg from "pg";  // Import postgre 
 import bcrypt from "bcrypt"; // Import bcrypt.
-// import EJS_INCLUDE_REGEX from 'ejs-include-regex';
-
+ import dotenv from 'dotenv';
+dotenv.config();
 import ejs from "ejs";
 
 import session from "express-session";
@@ -42,8 +42,8 @@ app.use(passport.session());
 const db = new pg.Client({
     user: "postgres",
     host: "localhost",
-    database: "Pathology",
-    password: "Vivek1709",
+    database: process.env.DB_Name,
+    password:  process.env.Passwrod,
     port: 5432,
 })
 
